@@ -5,12 +5,12 @@ const TerserPlugin = require('terser-webpack-plugin');
 const common = require('./webpack.config');
 
 module.exports = merge(common, {
-    mode: 'production',
-    optimization: {
-        minimizer: [
-            new TerserPlugin({}),
-            new OptimizeCSSAssetsPlugin({}),
-            new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i })
-        ],
-    },
+  mode: 'production',
+  optimization: {
+    minimizer: [
+      new TerserPlugin({}),
+      new OptimizeCSSAssetsPlugin({}),
+      new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
+    ],
+  },
 });
